@@ -6,7 +6,7 @@ import mkcert from 'vite-plugin-mkcert';
 export default ({ mode }) => {
   // Load app-level env vars to node-level env vars.
   process.env = { ...process.env, ...loadEnv(mode, process.cwd()) };
-  const PUBLIC_URL = process.env.VITE_PUBLIC_URL || '/hr/portal/';
+  const PUBLIC_URL = process.env.VITE_PUBLIC_URL || '/www/';
 
   return defineConfig({
     envPrefix: 'REACT_',
