@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   
@@ -15,16 +18,18 @@ export default function Footer() {
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-jazinski-blue dark:hover:text-jazinski-gold transition-colors"
+              aria-label="GitHub"
             >
-              GitHub
+              <FontAwesomeIcon icon={faGithub} className="w-6 h-6" />
             </a>
             <a 
               href="https://linkedin.com" 
               target="_blank" 
               rel="noopener noreferrer"
               className="text-gray-600 dark:text-gray-400 hover:text-jazinski-blue dark:hover:text-jazinski-gold transition-colors"
+              aria-label="LinkedIn"
             >
-              LinkedIn
+              <FontAwesomeIcon icon={faLinkedin} className="w-6 h-6" />
             </a>
           </div>
         </div>
