@@ -33,6 +33,16 @@
     <meta name="keywords" content="development, design, innovation, web development, coding" />
     
     <title>Jazinski - Code. Create. Innovate.</title>
+    <script>
+      // Prevent flash of white background by applying dark theme immediately
+      (function() {
+        const savedTheme = localStorage.getItem('theme');
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+          document.documentElement.classList.add('dark');
+        }
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>
