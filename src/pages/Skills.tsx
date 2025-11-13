@@ -1,8 +1,9 @@
 export default function Skills() {
   const skills = [
-    { category: "Frontend", items: ["React", "TypeScript", "Tailwind CSS", "Vite"] },
-    { category: "Backend", items: ["Node.js", "Express", "REST APIs", "GraphQL"] },
-    { category: "Tools", items: ["Git", "VS Code", "npm", "GitHub Actions"] },
+    { category: "Frontend", items: ["React", "TypeScript", "JavaScript", "HTML5/CSS3", "Tailwind CSS", "Redux", "Next.js", "Vue.js"] },
+    { category: "Backend", items: ["Node.js", "Python", "Java", "Express", "REST APIs", "GraphQL", "Microservices", "PostgreSQL", "MongoDB"] },
+    { category: "Cloud & DevOps", items: ["AWS", "Docker", "Kubernetes", "CI/CD", "GitHub Actions", "Terraform", "Jenkins"] },
+    { category: "Tools & Practices", items: ["Git", "Agile/Scrum", "Test-Driven Development", "Code Review", "System Design", "Performance Optimization"] },
   ];
 
   return (
