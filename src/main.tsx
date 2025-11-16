@@ -8,6 +8,7 @@ import About from './pages/About.tsx'
 import Skills from './pages/Skills.tsx'
 import Services from './pages/Services.tsx'
 import Contact from './pages/Contact.tsx'
+import NotFound from './pages/NotFound.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -19,6 +20,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="skills" element={<Skills />} />
           <Route path="services" element={<Services />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
     </HashRouter>
