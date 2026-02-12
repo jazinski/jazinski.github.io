@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concept B: Glassmorphism - About</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3d5a73',
+                        gold: '#c9a65c',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap');
+        body {
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+            min-height: 100vh;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.4s ease;
+        }
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="glass sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-white">Chris Jazinski</div>
+                <div class="flex gap-8 text-white font-medium">
+                    <a href="#" class="hover:text-gold transition">Home</a>
+                    <a href="#" class="text-gold">About</a>
+                    <a href="#" class="hover:text-gold transition">Skills</a>
+                    <a href="#" class="hover:text-gold transition">Services</a>
+                    <a href="#" class="hover:text-gold transition">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="glass rounded-3xl p-16 text-center text-white">
+                <h1 class="text-8xl font-bold mb-6">About Me</h1>
+                <p class="text-2xl opacity-90">Passionate engineer, creative problem solver</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Content -->
+    <section class="py-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-2 gap-12">
+                <!-- Left Column -->
+                <div class="space-y-8">
+                    <div class="glass-card rounded-3xl p-12 text-white">
+                        <div class="w-full h-80 bg-gradient-to-br from-gold/30 to-primary/30 rounded-2xl mb-8 flex items-center justify-center">
+                            <i class="fas fa-user text-9xl opacity-50"></i>
+                        </div>
+                        <h2 class="text-5xl font-bold mb-6">Hi, I'm Chris</h2>
+                        <p class="text-xl leading-relaxed opacity-90 mb-4">
+                            A senior software engineer with a passion for creating elegant solutions to complex problems.
+                        </p>
+                        <p class="text-xl leading-relaxed opacity-90">
+                            With over a decade of experience, I've helped startups and enterprises build products 
+                            that users love and that scale effortlessly.
+                        </p>
+                    </div>
+
+                    <div class="glass-card rounded-3xl p-8 text-white">
+                        <h3 class="text-3xl font-bold mb-6 flex items-center gap-3">
+                            <i class="fas fa-quote-left text-gold"></i>
+                            Philosophy
+                        </h3>
+                        <p class="text-lg leading-relaxed opacity-90">
+                            "The best code is not just functional—it's elegant, maintainable, and tells a story. 
+                            I believe in crafting software that makes both users and developers smile."
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Column -->
+                <div class="space-y-8">
+                    <div class="glass-card rounded-3xl p-12 text-white">
+                        <h3 class="text-4xl font-bold mb-8">Background</h3>
+                        <div class="space-y-6 text-lg opacity-90 leading-relaxed">
+                            <p>
+                                I started my journey in software development over 10 years ago, and it's been 
+                                an incredible adventure ever since. From building my first website in high school 
+                                to architecting enterprise-scale cloud solutions today.
+                            </p>
+                            <p>
+                                My expertise spans the full stack—from crafting beautiful, responsive frontends 
+                                to designing robust backend systems and cloud infrastructure. I'm equally comfortable 
+                                writing TypeScript, Python, or diving into DevOps automation.
+                            </p>
+                            <p>
+                                Beyond the technical skills, I'm passionate about mentorship, open source 
+                                contribution, and staying at the forefront of technology trends.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="glass-card rounded-2xl p-6 text-white text-center">
+                            <div class="text-5xl font-bold mb-2">10+</div>
+                            <div class="opacity-90">Years</div>
+                        </div>
+                        <div class="glass-card rounded-2xl p-6 text-white text-center">
+                            <div class="text-5xl font-bold mb-2">50+</div>
+                            <div class="opacity-90">Projects</div>
+                        </div>
+                        <div class="glass-card rounded-2xl p-6 text-white text-center">
+                            <div class="text-5xl font-bold mb-2">30+</div>
+                            <div class="opacity-90">Clients</div>
+                        </div>
+                        <div class="glass-card rounded-2xl p-6 text-white text-center">
+                            <div class="text-5xl font-bold mb-2">15+</div>
+                            <div class="opacity-90">Technologies</div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card rounded-3xl p-8 text-white">
+                        <h3 class="text-3xl font-bold mb-6">Interests</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="px-4 py-2 bg-white/20 rounded-full text-sm">Cloud Architecture</span>
+                            <span class="px-4 py-2 bg-white/20 rounded-full text-sm">AI/ML</span>
+                            <span class="px-4 py-2 bg-white/20 rounded-full text-sm">Open Source</span>
+                            <span class="px-4 py-2 bg-white/20 rounded-full text-sm">DevOps</span>
+                            <span class="px-4 py-2 bg-white/20 rounded-full text-sm">Mentorship</span>
+                            <span class="px-4 py-2 bg-white/20 rounded-full text-sm">UI/UX Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="py-16 px-6">
+        <div class="max-w-5xl mx-auto">
+            <div class="glass-card rounded-3xl p-12 text-white">
+                <h2 class="text-6xl font-bold mb-12">Experience</h2>
+                
+                <div class="space-y-8">
+                    <div class="border-l-4 border-gold pl-8">
+                        <div class="flex justify-between items-start mb-3">
+                            <div>
+                                <h3 class="text-3xl font-bold">Senior Software Engineer</h3>
+                                <div class="text-xl opacity-80">Tech Company Inc.</div>
+                            </div>
+                            <div class="text-gold font-semibold">2020 - Present</div>
+                        </div>
+                        <p class="text-lg opacity-90">
+                            Leading development of cloud-native applications and mentoring team members.
+                        </p>
+                    </div>
+
+                    <div class="border-l-4 border-gold/60 pl-8">
+                        <div class="flex justify-between items-start mb-3">
+                            <div>
+                                <h3 class="text-3xl font-bold">Software Engineer</h3>
+                                <div class="text-xl opacity-80">Startup Solutions</div>
+                            </div>
+                            <div class="text-gold/80 font-semibold">2017 - 2020</div>
+                        </div>
+                        <p class="text-lg opacity-90">
+                            Built full-stack applications and implemented DevOps best practices.
+                        </p>
+                    </div>
+
+                    <div class="border-l-4 border-gold/40 pl-8">
+                        <div class="flex justify-between items-start mb-3">
+                            <div>
+                                <h3 class="text-3xl font-bold">Junior Developer</h3>
+                                <div class="text-xl opacity-80">Digital Agency</div>
+                            </div>
+                            <div class="text-gold/60 font-semibold">2014 - 2017</div>
+                        </div>
+                        <p class="text-lg opacity-90">
+                            Developed client websites and learned modern development workflows.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 px-6">
+        <div class="max-w-4xl mx-auto">
+            <div class="glass rounded-3xl p-16 text-center text-white">
+                <h2 class="text-6xl font-bold mb-6">Let's Connect</h2>
+                <p class="text-2xl mb-10 opacity-90">
+                    Interested in working together? I'd love to hear from you.
+                </p>
+                <button class="bg-gold text-primary px-10 py-4 text-xl font-bold rounded-full hover:bg-yellow-500 transition transform hover:scale-105">
+                    Get In Touch
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="glass py-12 px-6 mt-16">
+        <div class="max-w-7xl mx-auto flex justify-between items-center text-white">
+            <div class="text-xl font-bold">© 2024 Chris Jazinski</div>
+            <div class="flex gap-6 text-2xl">
+                <a href="#" class="hover:text-gold transition"><i class="fab fa-github"></i></a>
+                <a href="#" class="hover:text-gold transition"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="hover:text-gold transition"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
