@@ -11,7 +11,7 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 transition-colors bg-white/80 backdrop-blur-md border-b border-gray-200 dark:bg-gray-900/80 dark:border-gray-800 shadow-sm">
+    <header className="sticky top-0 z-50 transition-colors bg-white/80 backdrop-blur-md border-b border-gray-200 dark:bg-dark-card/90 dark:border-dark-border shadow-sm">
       <div className="container px-4 py-4 mx-auto">
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -32,8 +32,8 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
               className={({ isActive }) =>
                 `transition-all font-medium ${
                   isActive
-                    ? "text-jazinski-blue dark:text-jazinski-gold border-b-2 border-jazinski-blue dark:border-jazinski-gold pb-1"
-                    : "text-gray-700 dark:text-gray-300 hover:text-jazinski-blue dark:hover:text-jazinski-gold"
+                    ? "text-jazinski-blue dark:text-gold border-b-2 border-jazinski-blue dark:border-gold pb-1"
+                    : "text-gray-700 dark:text-gray-300 hover:text-jazinski-blue dark:hover:text-gold"
                 }`
               }
             >
@@ -44,8 +44,8 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
               className={({ isActive }) =>
                 `transition-all font-medium ${
                   isActive
-                    ? "text-jazinski-blue dark:text-jazinski-gold border-b-2 border-jazinski-blue dark:border-jazinski-gold pb-1"
-                    : "text-gray-700 dark:text-gray-300 hover:text-jazinski-blue dark:hover:text-jazinski-gold"
+                    ? "text-jazinski-blue dark:text-gold border-b-2 border-jazinski-blue dark:border-gold pb-1"
+                    : "text-gray-700 dark:text-gray-300 hover:text-jazinski-blue dark:hover:text-gold"
                 }`
               }
             >
@@ -56,8 +56,8 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
               className={({ isActive }) =>
                 `transition-all font-medium ${
                   isActive
-                    ? "text-jazinski-blue dark:text-jazinski-gold border-b-2 border-jazinski-blue dark:border-jazinski-gold pb-1"
-                    : "text-gray-700 dark:text-gray-300 hover:text-jazinski-blue dark:hover:text-jazinski-gold"
+                    ? "text-jazinski-blue dark:text-gold border-b-2 border-jazinski-blue dark:border-gold pb-1"
+                    : "text-gray-700 dark:text-gray-300 hover:text-jazinski-blue dark:hover:text-gold"
                 }`
               }
             >
@@ -68,8 +68,8 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
               className={({ isActive }) =>
                 `transition-all font-medium ${
                   isActive
-                    ? "text-jazinski-blue dark:text-jazinski-gold border-b-2 border-jazinski-blue dark:border-jazinski-gold pb-1"
-                    : "text-gray-700 dark:text-gray-300 hover:text-jazinski-blue dark:hover:text-jazinski-gold"
+                    ? "text-jazinski-blue dark:text-gold border-b-2 border-jazinski-blue dark:border-gold pb-1"
+                    : "text-gray-700 dark:text-gray-300 hover:text-jazinski-blue dark:hover:text-gold"
                 }`
               }
             >
@@ -82,7 +82,7 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
             {/* Theme Toggle */}
             <button
               onClick={toggleTheme}
-              className="p-2.5 transition-all bg-gray-100 rounded-lg dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 hover:scale-110"
+              className="p-2.5 transition-all bg-gray-100 rounded-lg dark:bg-dark-base hover:bg-gray-200 dark:hover:bg-gray-800 hover:scale-110"
               aria-label="Toggle theme"
             >
               {isDark ? <Sun /> : <Moon />}
@@ -91,7 +91,7 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2.5 transition-all bg-gray-100 rounded-lg dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700"
+              className="md:hidden p-2.5 transition-all bg-gray-100 rounded-lg dark:bg-dark-base hover:bg-gray-200 dark:hover:bg-gray-800"
               aria-label="Toggle mobile menu"
             >
               {isMobileMenuOpen ? <X /> : <Menu />}
@@ -101,15 +101,15 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <nav className="md:hidden mt-4 pt-4 border-t border-gray-200 dark:border-gray-800 flex flex-col space-y-3">
+          <nav className="md:hidden mt-4 pt-4 border-t border-gray-200 dark:border-dark-border flex flex-col space-y-3">
             <NavLink
               to="/about"
               onClick={() => setIsMobileMenuOpen(false)}
               className={({ isActive }) =>
                 `transition-all font-medium py-2 px-3 rounded-lg ${
                   isActive
-                    ? "text-jazinski-blue dark:text-jazinski-gold bg-blue-50 dark:bg-gray-800"
-                    : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    ? "text-jazinski-blue dark:text-gold bg-blue-50 dark:bg-dark-card"
+                    : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-card"
                 }`
               }
             >
@@ -121,8 +121,8 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
               className={({ isActive }) =>
                 `transition-all font-medium py-2 px-3 rounded-lg ${
                   isActive
-                    ? "text-jazinski-blue dark:text-jazinski-gold bg-blue-50 dark:bg-gray-800"
-                    : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    ? "text-jazinski-blue dark:text-gold bg-blue-50 dark:bg-dark-card"
+                    : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-card"
                 }`
               }
             >
@@ -134,8 +134,8 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
               className={({ isActive }) =>
                 `transition-all font-medium py-2 px-3 rounded-lg ${
                   isActive
-                    ? "text-jazinski-blue dark:text-jazinski-gold bg-blue-50 dark:bg-gray-800"
-                    : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    ? "text-jazinski-blue dark:text-gold bg-blue-50 dark:bg-dark-card"
+                    : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-card"
                 }`
               }
             >
@@ -147,8 +147,8 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
               className={({ isActive }) =>
                 `transition-all font-medium py-2 px-3 rounded-lg ${
                   isActive
-                    ? "text-jazinski-blue dark:text-jazinski-gold bg-blue-50 dark:bg-gray-800"
-                    : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    ? "text-jazinski-blue dark:text-gold bg-blue-50 dark:bg-dark-card"
+                    : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-card"
                 }`
               }
             >

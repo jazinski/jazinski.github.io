@@ -30,7 +30,7 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-950 transition-colors">
+    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-dark-base transition-colors">
       <Header isDark={isDark} toggleTheme={toggleTheme} />
       
       <main className="flex-1 container mx-auto px-4 py-12">
