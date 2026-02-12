@@ -8,6 +8,7 @@ import HomeMockup1 from './pages/Home-Mockup1.tsx'
 import HomeMockup2 from './pages/Home-Mockup2.tsx'
 import HomeMockup3 from './pages/Home-Mockup3.tsx'
 import About from './pages/About.tsx'
+import Projects from './pages/Projects.tsx'
 import Skills from './pages/Skills.tsx'
 import Services from './pages/Services.tsx'
 import Contact from './pages/Contact.tsx'
@@ -23,6 +24,7 @@ createRoot(document.getElementById('root')!).render(
           <Route path="mockup2" element={<HomeMockup2 />} />
           <Route path="mockup3" element={<HomeMockup3 />} />
           <Route path="about" element={<About />} />
+          <Route path="projects" element={<Projects />} />
           <Route path="skills" element={<Skills />} />
           <Route path="services" element={<Services />} />
           <Route path="contact" element={<Contact />} />

@@ -1,195 +1,247 @@
-export default function Projects() {
-  const featuredProject = {
-    title: "Enterprise E-Commerce Platform",
-    description: "Full-stack e-commerce solution with microservices architecture, real-time inventory management, and AI-powered recommendations",
-    tech: ["React", "Node.js", "PostgreSQL", "AWS", "Docker", "Kubernetes"],
-    image: "🛍️",
-    github: "https://github.com/jazinski/ecommerce-platform",
-    demo: "https://demo.jazinski.dev/ecommerce"
-  };
+import React from "react";
+import { GitBranch, ExternalLink, Calendar } from "./Icons";
 
-  const projects = [
-    {
-      title: "AI Chat Assistant",
-      description: "Intelligent chatbot with natural language processing and context-aware responses",
-      tech: ["Python", "TensorFlow", "FastAPI", "React"],
-      image: "🤖",
-      github: "https://github.com/jazinski/ai-chat",
-      demo: "https://demo.jazinski.dev/ai-chat"
-    },
-    {
-      title: "Real-Time Analytics Dashboard",
-      description: "Live data visualization platform with WebSocket integration and custom metrics",
-      tech: ["Vue.js", "Node.js", "Redis", "D3.js"],
-      image: "📊",
-      github: "https://github.com/jazinski/analytics-dashboard",
-      demo: "https://demo.jazinski.dev/analytics"
-    },
-    {
-      title: "DevOps Automation Suite",
-      description: "CI/CD pipeline orchestration with automated testing and deployment workflows",
-      tech: ["GitHub Actions", "Docker", "Terraform", "AWS"],
-      image: "🚀",
-      github: "https://github.com/jazinski/devops-suite",
-      demo: null
-    },
-    {
-      title: "Mobile-First Social Network",
-      description: "Progressive web app for community engagement with real-time messaging",
-      tech: ["React Native", "Firebase", "TypeScript", "GraphQL"],
-      image: "📱",
-      github: "https://github.com/jazinski/social-network",
-      demo: "https://demo.jazinski.dev/social"
-    },
-    {
-      title: "Blockchain Voting System",
-      description: "Secure and transparent voting platform using smart contracts",
-      tech: ["Solidity", "Web3.js", "React", "Ethereum"],
-      image: "🗳️",
-      github: "https://github.com/jazinski/blockchain-voting",
-      demo: null
-    },
-    {
-      title: "Task Management CLI",
-      description: "Command-line tool for project management with Git integration",
-      tech: ["Rust", "CLI", "SQLite"],
-      image: "⚡",
-      github: "https://github.com/jazinski/task-cli",
-      demo: null
-    }
-  ];
+interface Project {
+  id: string;
+  title: string;
+  description: string;
+  longDescription: string;
+  image: string;
+  techStack: string[];
+  githubUrl?: string;
+  liveUrl?: string;
+  date: string;
+  featured?: boolean;
+}
+
+const projects: Project[] = [
+  {
+    id: "agata-loop",
+    title: "Agata Loop",
+    description: "Autonomous AI engineering agent system with GitHub integration",
+    longDescription:
+      "An advanced autonomous engineering loop that integrates with GitHub webhooks, performs intelligent code analysis, security audits, and automated deployments. Features include AI swarm audits, Shadow Lab verification, and comprehensive testing pipelines.",
+    image: "/projects/agata-loop.jpg",
+    techStack: ["TypeScript", "Node.js", "GitHub API", "AI/ML", "Docker"],
+    githubUrl: "https://github.com/jazinski/agata-loop",
+    date: "2024",
+    featured: true,
+  },
+  {
+    id: "portfolio",
+    title: "Personal Portfolio",
+    description: "Modern React portfolio with dark mode and responsive design",
+    longDescription:
+      "A sleek, performant portfolio website built with React and Tailwind CSS. Features dark mode toggle, responsive navigation, accessibility optimizations, and the Gold & Glow design system.",
+    image: "/projects/portfolio.jpg",
+    techStack: ["React", "TypeScript", "Tailwind CSS", "Vite"],
+    githubUrl: "https://github.com/jazinski/jazinski.github.io",
+    liveUrl: "https://jazinski.github.io",
+    date: "2024",
+    featured: true,
+  },
+];
+
+export default function Projects() {
+  const featuredProject = projects.find((p) => p.featured);
+  const otherProjects = projects.filter((p) => !p.featured);
 
   return (
-    <div className="max-w-7xl mx-auto">
-      {/* Page Header */}
-      <div className="text-center mb-16">
-        <h1 className="text-5xl md:text-6xl font-bold mb-4 gold-glow">
-          Projects
-        </h1>
-        <p className="text-xl text-gray-400">
-          A showcase of my recent work and technical experiments
-        </p>
-      </div>
+    <div className="min-h-screen py-16 bg-white dark:bg-dark-base">
+      <div className="container px-4 mx-auto">
+        {/* Hero Section */}
+        <div className="mb-16 text-center animate-fade-in-up">
+          <h1 className="mb-4 text-5xl font-bold text-gray-900 dark:text-white gold-glow">
+            Projects
+          </h1>
+          <p className="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-400">
+            A showcase of my recent work in software engineering and automation
+          </p>
+        </div>
 
-      {/* Featured Project */}
-      <div className="card-geometric p-8 md:p-12 mb-16 animate-on-scroll">
-        <div className="flex items-start gap-6 mb-6">
-          <div className="w-20 h-20 rounded-lg bg-gradient-to-br from-jazinski-gold to-jazinski-gold-light flex items-center justify-center flex-shrink-0">
-            <span className="text-4xl">{featuredProject.image}</span>
-          </div>
-          <div className="flex-1">
-            <div className="flex items-center gap-3 mb-3">
-              <span className="px-3 py-1 bg-jazinski-gold text-gray-900 text-xs font-bold uppercase tracking-wide rounded">
-                Featured
-              </span>
+        {/* Featured Project */}
+        {featuredProject && (
+          <div className="mb-16 animate-fade-in-up animation-delay-100">
+            <div className="overflow-hidden card-geometric">
+              <div className="grid gap-8 md:grid-cols-2">
+                {/* Image */}
+                <div className="overflow-hidden bg-gray-200 dark:bg-dark-base aspect-video">
+                  <img
+                    src={featuredProject.image}
+                    alt={featuredProject.title}
+                    className="object-cover w-full h-full transition-transform duration-500 hover:scale-110"
+                    onError={(e) => {
+                      e.currentTarget.src =
+                        "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%231a1f26' width='400' height='300'/%3E%3Ctext fill='%23c9a65c' font-family='Arial' font-size='20' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3E%F0%9F%9A%80 {featuredProject.title}%3C/text%3E%3C/svg%3E";
+                    }}
+                  />
+                </div>
+
+                {/* Content */}
+                <div className="flex flex-col justify-center p-8">
+                  <div className="inline-block px-3 py-1 mb-4 text-sm font-semibold text-gold bg-gold/10 rounded-full w-fit">
+                    Featured Project
+                  </div>
+                  <h2 className="mb-4 text-3xl font-bold text-gray-900 dark:text-white">
+                    {featuredProject.title}
+                  </h2>
+                  <p className="mb-4 text-gray-600 dark:text-gray-400">
+                    {featuredProject.longDescription}
+                  </p>
+
+                  {/* Tech Stack */}
+                  <div className="flex flex-wrap gap-2 mb-6">
+                    {featuredProject.techStack.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-3 py-1 text-sm font-medium text-gray-700 bg-gray-100 rounded-full dark:bg-dark-base dark:text-gray-300"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Links */}
+                  <div className="flex gap-4">
+                    {featuredProject.githubUrl && (
+                      <a
+                        href={featuredProject.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-6 py-3 font-medium transition-all btn-secondary"
+                      >
+                        <GitBranch className="w-5 h-5" />
+                        GitHub
+                      </a>
+                    )}
+                    {featuredProject.liveUrl && (
+                      <a
+                        href={featuredProject.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 px-6 py-3 font-medium transition-all btn-primary"
+                      >
+                        <ExternalLink className="w-5 h-5" />
+                        Live Demo
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold mb-4 gold-glow">
-              {featuredProject.title}
+          </div>
+        )}
+
+        {/* Other Projects Grid */}
+        {otherProjects.length > 0 && (
+          <>
+            <h2 className="mb-8 text-3xl font-bold text-center text-gray-900 dark:text-white animate-fade-in-up animation-delay-200">
+              More Projects
             </h2>
-            <p className="text-lg text-gray-400 mb-6">
-              {featuredProject.description}
-            </p>
-            <div className="flex flex-wrap gap-2 mb-6">
-              {featuredProject.tech.map((tech) => (
-                <span
-                  key={tech}
-                  className="px-3 py-1 border border-jazinski-gold text-jazinski-gold text-sm rounded"
+            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+              {otherProjects.map((project, index) => (
+                <div
+                  key={project.id}
+                  className="overflow-hidden card-geometric animate-fade-in-up"
+                  style={{
+                    animationDelay: `${(index + 3) * 100}ms`,
+                  }}
                 >
-                  {tech}
-                </span>
+                  {/* Image */}
+                  <div className="overflow-hidden bg-gray-200 dark:bg-dark-base aspect-video">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="object-cover w-full h-full transition-transform duration-500 hover:scale-110"
+                      onError={(e) => {
+                        e.currentTarget.src = `data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='300'%3E%3Crect fill='%231a1f26' width='400' height='300'/%3E%3Ctext fill='%23c9a65c' font-family='Arial' font-size='20' x='50%25' y='50%25' text-anchor='middle' dominant-baseline='middle'%3E%F0%9F%9A%80 ${project.title}%3C/text%3E%3C/svg%3E`;
+                      }}
+                    />
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                        {project.title}
+                      </h3>
+                      <div className="flex items-center gap-1 text-sm text-gray-500 dark:text-gray-400">
+                        <Calendar className="w-4 h-4" />
+                        {project.date}
+                      </div>
+                    </div>
+
+                    <p className="mb-4 text-gray-600 dark:text-gray-400">
+                      {project.description}
+                    </p>
+
+                    {/* Tech Stack */}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.techStack.slice(0, 3).map((tech) => (
+                        <span
+                          key={tech}
+                          className="px-2 py-1 text-xs font-medium text-gray-700 bg-gray-100 rounded dark:bg-dark-base dark:text-gray-300"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                      {project.techStack.length > 3 && (
+                        <span className="px-2 py-1 text-xs font-medium text-gray-500 dark:text-gray-400">
+                          +{project.techStack.length - 3}
+                        </span>
+                      )}
+                    </div>
+
+                    {/* Links */}
+                    <div className="flex gap-3">
+                      {project.githubUrl && (
+                        <a
+                          href={project.githubUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium transition-all btn-secondary"
+                        >
+                          <GitBranch className="w-4 h-4" />
+                          Code
+                        </a>
+                      )}
+                      {project.liveUrl && (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium transition-all btn-primary"
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                          Demo
+                        </a>
+                      )}
+                    </div>
+                  </div>
+                </div>
               ))}
             </div>
-            <div className="flex gap-4">
-              <a
-                href={featuredProject.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-secondary"
-              >
-                🐙 View Code
-              </a>
-              {featuredProject.demo && (
-                <a
-                  href={featuredProject.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-primary"
-                >
-                  ✨ Live Demo
-                </a>
-              )}
-            </div>
+          </>
+        )}
+
+        {/* CTA Section */}
+        <div className="mt-16 text-center animate-fade-in-up animation-delay-300">
+          <div className="p-12 card-geometric bg-gradient-to-br from-dark-card to-dark-base">
+            <h2 className="mb-4 text-3xl font-bold text-white gold-glow">
+              Interested in Collaborating?
+            </h2>
+            <p className="max-w-2xl mx-auto mb-8 text-lg text-gray-400">
+              I'm always open to discussing new projects, creative ideas, or
+              opportunities to be part of your vision.
+            </p>
+            <a
+              href="#/contact"
+              className="inline-flex items-center gap-2 px-8 py-4 text-lg font-medium transition-all btn-primary"
+            >
+              Get in Touch
+            </a>
           </div>
         </div>
-      </div>
-
-      {/* Projects Grid */}
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {projects.map((project) => (
-          <div
-            key={project.title}
-            className="card-geometric p-6 animate-on-scroll flex flex-col"
-          >
-            <div className="w-16 h-16 rounded-lg bg-gradient-to-br from-jazinski-gold to-jazinski-gold-light flex items-center justify-center mb-4">
-              <span className="text-3xl">{project.image}</span>
-            </div>
-            
-            <h3 className="text-xl font-bold text-white mb-3">
-              {project.title}
-            </h3>
-            
-            <p className="text-gray-400 text-sm mb-4 flex-1">
-              {project.description}
-            </p>
-            
-            <div className="flex flex-wrap gap-2 mb-4">
-              {project.tech.map((tech) => (
-                <span
-                  key={tech}
-                  className="px-2 py-1 border border-jazinski-gold/50 text-jazinski-gold text-xs rounded"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-            
-            <div className="flex gap-3 mt-auto">
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 px-4 py-2 border-2 border-jazinski-gold text-jazinski-gold rounded-lg text-center hover:bg-jazinski-gold hover:text-gray-900 transition-all duration-300 text-sm font-semibold"
-              >
-                Code
-              </a>
-              {project.demo && (
-                <a
-                  href={project.demo}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-1 px-4 py-2 bg-gradient-to-r from-jazinski-gold to-jazinski-gold-light text-gray-900 rounded-lg text-center hover:shadow-glow transition-all duration-300 text-sm font-semibold"
-                >
-                  Demo
-                </a>
-              )}
-            </div>
-          </div>
-        ))}
-      </div>
-
-      {/* GitHub CTA */}
-      <div className="mt-16 text-center">
-        <p className="text-gray-400 mb-6">
-          Want to see more? Check out my GitHub profile for additional projects and open source contributions.
-        </p>
-        <a
-          href="https://github.com/jazinski"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="btn-primary inline-flex items-center gap-2"
-        >
-          🐙 View All on GitHub
-        </a>
       </div>
     </div>
   );
