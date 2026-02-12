@@ -18,6 +18,33 @@ function App() {
     }
   }, [])
 
+  useEffect(() => {
+    // Smooth scroll behavior with offset for fixed header
+    const handleAnchorClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement
+      if (target.tagName === 'A' && target.getAttribute('href')?.startsWith('#')) {
+        e.preventDefault()
+        const id = target.getAttribute('href')?.slice(1)
+        if (id) {
+          const element = document.getElementById(id)
+          if (element) {
+            const headerOffset = 80 // Height of fixed header
+            const elementPosition = element.getBoundingClientRect().top
+            const offsetPosition = elementPosition + window.pageYOffset - headerOffset
+
+            window.scrollTo({
+              top: offsetPosition,
+              behavior: 'smooth'
+            })
+          }
+        }
+      }
+    }
+
+    document.addEventListener('click', handleAnchorClick)
+    return () => document.removeEventListener('click', handleAnchorClick)
+  }, [])
+
   const toggleTheme = () => {
     setIsDark(!isDark)
     if (!isDark) {
@@ -30,7 +57,7 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-gray-950 transition-colors">
+    <div className="min-h-screen flex flex-col bg-gray-50 dark:bg-dark-base transition-colors">
       <Header isDark={isDark} toggleTheme={toggleTheme} />
       
       <main className="flex-1 container mx-auto px-4 py-12">
