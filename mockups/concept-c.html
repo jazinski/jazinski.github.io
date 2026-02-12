@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concept C: Dynamic Gradient - Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3d5a73',
+                        gold: '#c9a65c',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+        .gradient-mesh {
+            background: linear-gradient(135deg, #3d5a73 0%, #5a7a96 50%, #c9a65c 100%);
+            animation: gradientShift 8s ease infinite;
+            background-size: 200% 200%;
+        }
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+        }
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.9);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        .glass-nav {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #3d5a73 0%, #c9a65c 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .bento-large {
+            grid-column: span 2;
+            grid-row: span 2;
+        }
+        .bento-wide {
+            grid-column: span 2;
+        }
+        .bento-tall {
+            grid-row: span 2;
+        }
+        .floating-icon {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .gradient-border {
+            position: relative;
+            background: white;
+        }
+        .gradient-border::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            padding: 2px;
+            background: linear-gradient(135deg, #3d5a73, #c9a65c);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="glass-nav sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-8 py-6">
+            <div class="flex justify-between items-center">
+                <div class="text-3xl font-bold gradient-text">CJ</div>
+                <div class="flex gap-8 text-base font-medium">
+                    <a href="#" class="text-primary hover:text-gold transition-colors">Home</a>
+                    <a href="#" class="text-gray-600 hover:text-gold transition-colors">About</a>
+                    <a href="#" class="text-gray-600 hover:text-gold transition-colors">Work</a>
+                    <a href="#" class="text-gray-600 hover:text-gold transition-colors">Skills</a>
+                    <a href="#" class="text-gray-600 hover:text-gold transition-colors">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-mesh text-white py-32 px-8 relative overflow-hidden">
+        <div class="absolute top-20 right-20 text-9xl opacity-20 floating-icon">
+            <i class="fas fa-code"></i>
+        </div>
+        <div class="absolute bottom-20 left-20 text-7xl opacity-20 floating-icon" style="animation-delay: 1s;">
+            <i class="fas fa-laptop"></i>
+        </div>
+        
+        <div class="max-w-6xl mx-auto relative z-10">
+            <div class="glass-card rounded-3xl p-16 max-w-4xl">
+                <div class="text-gold text-sm font-semibold tracking-wider uppercase mb-4">Senior Software Engineer</div>
+                <h1 class="text-7xl font-bold mb-6 leading-tight text-gray-900">
+                    Chris Jazinski
+                </h1>
+                <p class="text-2xl text-gray-700 mb-8 leading-relaxed">
+                    Creating cutting-edge digital experiences with modern tech stacks and creative problem-solving
+                </p>
+                <div class="flex gap-4">
+                    <button class="bg-gradient-to-r from-primary to-gold text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl transition-all transform hover:scale-105">
+                        View Projects
+                    </button>
+                    <button class="bg-white text-primary px-8 py-4 rounded-full font-semibold hover:shadow-xl transition-all">
+                        Get in Touch
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bento Grid Services -->
+    <section class="py-24 px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-6xl font-bold gradient-text mb-4">Services & Expertise</h2>
+                <p class="text-xl text-gray-600">Comprehensive solutions for modern digital challenges</p>
+            </div>
+            
+            <div class="grid grid-cols-4 grid-rows-4 gap-6" style="grid-auto-rows: 200px;">
+                <!-- Large Feature Card -->
+                <div class="glass-card rounded-3xl p-8 bento-large flex flex-col justify-between group cursor-pointer">
+                    <div>
+                        <div class="w-16 h-16 bg-gradient-to-br from-primary to-gold rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                            <i class="fas fa-laptop-code text-3xl text-white"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold text-gray-900 mb-3">Full-Stack Development</h3>
+                        <p class="text-gray-600 text-lg">
+                            End-to-end web applications with React, Node.js, TypeScript, and modern frameworks. Building scalable, performant solutions.
+                        </p>
+                    </div>
+                    <div class="text-gold font-semibold flex items-center gap-2 group-hover:gap-4 transition-all">
+                        Learn More <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+
+                <!-- Cloud Solutions -->
+                <div class="glass-card rounded-3xl p-8 bento-wide flex items-center gap-6 group cursor-pointer">
+                    <div class="w-20 h-20 bg-gradient-to-br from-primary to-gold rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-cloud text-4xl text-white"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Cloud & DevOps</h3>
+                        <p class="text-gray-600">AWS, Docker, Kubernetes, CI/CD automation</p>
+                    </div>
+                </div>
+
+                <!-- Mobile Development -->
+                <div class="glass-card rounded-3xl p-8 bento-tall flex flex-col justify-between group cursor-pointer">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-gold rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-mobile-alt text-3xl text-white"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-3">Mobile Apps</h3>
+                        <p class="text-gray-600 mb-4">Native and cross-platform mobile solutions</p>
+                        <div class="text-gold font-semibold">→</div>
+                    </div>
+                </div>
+
+                <!-- API Development -->
+                <div class="glass-card rounded-3xl p-8 flex items-center gap-6 group cursor-pointer">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-gold rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-database text-2xl text-white"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">API Design</h3>
+                        <p class="text-gray-600 text-sm">RESTful & GraphQL</p>
+                    </div>
+                </div>
+
+                <!-- Security -->
+                <div class="glass-card rounded-3xl p-8 flex items-center gap-6 group cursor-pointer">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-gold rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-shield-alt text-2xl text-white"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">Security</h3>
+                        <p class="text-gray-600 text-sm">Audits & Testing</p>
+                    </div>
+                </div>
+
+                <!-- Consulting -->
+                <div class="glass-card rounded-3xl p-8 bento-wide flex items-center gap-6 group cursor-pointer">
+                    <div class="w-20 h-20 bg-gradient-to-br from-primary to-gold rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-lightbulb text-4xl text-white"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-2">Technical Consulting</h3>
+                        <p class="text-gray-600">Strategic guidance and architecture design</p>
+                    </div>
+                </div>
+
+                <!-- UI/UX -->
+                <div class="glass-card rounded-3xl p-8 flex items-center gap-6 group cursor-pointer">
+                    <div class="w-16 h-16 bg-gradient-to-br from-primary to-gold rounded-2xl flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform">
+                        <i class="fas fa-palette text-2xl text-white"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold text-gray-900 mb-1">UI/UX</h3>
+                        <p class="text-gray-600 text-sm">Design Systems</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-24 px-8">
+        <div class="max-w-6xl mx-auto">
+            <div class="glass-card rounded-3xl p-16">
+                <div class="grid grid-cols-4 gap-12">
+                    <div class="text-center">
+                        <div class="text-6xl font-bold gradient-text mb-3">10+</div>
+                        <div class="text-gray-600 font-medium">Years Experience</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-6xl font-bold gradient-text mb-3">50+</div>
+                        <div class="text-gray-600 font-medium">Projects Shipped</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-6xl font-bold gradient-text mb-3">30+</div>
+                        <div class="text-gray-600 font-medium">Happy Clients</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-6xl font-bold gradient-text mb-3">15+</div>
+                        <div class="text-gray-600 font-medium">Technologies</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 px-8">
+        <div class="max-w-4xl mx-auto">
+            <div class="gradient-mesh rounded-3xl p-16 text-center text-white">
+                <h2 class="text-6xl font-bold mb-6">Ready to Build?</h2>
+                <p class="text-2xl mb-10 opacity-90">
+                    Let's turn your ideas into reality with cutting-edge technology
+                </p>
+                <button class="bg-white text-primary px-10 py-5 rounded-full text-lg font-semibold hover:shadow-2xl transition-all transform hover:scale-105">
+                    Start Your Project
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="glass-card rounded-3xl p-8">
+                <div class="flex justify-between items-center">
+                    <div class="text-2xl font-bold gradient-text">Chris Jazinski</div>
+                    <div class="flex gap-6">
+                        <a href="#" class="w-12 h-12 glass-card rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+                            <i class="fab fa-github text-xl text-gray-700"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 glass-card rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+                            <i class="fab fa-linkedin text-xl text-gray-700"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 glass-card rounded-full flex items-center justify-center hover:scale-110 transition-transform">
+                            <i class="fab fa-twitter text-xl text-gray-700"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
