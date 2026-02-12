@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concept A: Bold Geometric - Services</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#3d5a73',
+                        gold: '#c9a65c',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@700;800;900&family=Space+Grotesk:wght@400;500;700&display=swap');
+        body {
+            font-family: 'Space Grotesk', sans-serif;
+        }
+        h1, h2, h3 {
+            font-family: 'Inter', sans-serif;
+            font-weight: 900;
+        }
+        .geometric-bg {
+            background: linear-gradient(135deg, #3d5a73 0%, #2a3f52 100%);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="flex justify-between items-center">
+                <div class="text-3xl font-black text-primary">CJ</div>
+                <div class="flex gap-8 text-lg font-medium">
+                    <a href="#" class="text-gray-600 hover:text-primary">Home</a>
+                    <a href="#" class="text-gray-600 hover:text-primary">About</a>
+                    <a href="#" class="text-gray-600 hover:text-primary">Skills</a>
+                    <a href="#" class="text-primary border-b-4 border-gold pb-1">Services</a>
+                    <a href="#" class="text-gray-600 hover:text-primary">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="geometric-bg text-white py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <h1 class="text-8xl font-black mb-6">Services</h1>
+            <p class="text-2xl opacity-90">Comprehensive solutions for your business needs</p>
+            <div class="w-32 h-2 bg-gold mt-6"></div>
+        </div>
+    </section>
+
+    <!-- Services Grid -->
+    <section class="py-24 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-2xl transition-all">
+                    <div class="bg-primary h-3"></div>
+                    <div class="p-10">
+                        <div class="w-20 h-20 bg-gold/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-all">
+                            <i class="fas fa-laptop-code text-4xl text-primary"></i>
+                        </div>
+                        <h3 class="text-3xl font-black text-primary mb-4">Web Development</h3>
+                        <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                            Custom web applications built with modern frameworks. From simple landing pages 
+                            to complex enterprise solutions.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-gray-700">
+                                <i class="fas fa-check-circle text-gold"></i>
+                                React & Next.js
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-700">
+                                <i class="fas fa-check-circle text-gold"></i>
+                                Responsive Design
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-700">
+                                <i class="fas fa-check-circle text-gold"></i>
+                                Performance Optimization
+                            </li>
+                        </ul>
+                        <button class="w-full bg-primary text-white py-3 font-bold hover:bg-primary/90 transition-all">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-2xl transition-all">
+                    <div class="bg-primary h-3"></div>
+                    <div class="p-10">
+                        <div class="w-20 h-20 bg-gold/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-all">
+                            <i class="fas fa-cloud text-4xl text-primary"></i>
+                        </div>
+                        <h3 class="text-3xl font-black text-primary mb-4">Cloud Architecture</h3>
+                        <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                            Scalable, secure cloud infrastructure design and implementation for modern 
+                            applications.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-gray-700">
+                                <i class="fas fa-check-circle text-gold"></i>
+                                AWS & Azure
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-700">
+                                <i class="fas fa-check-circle text-gold"></i>
+                                Microservices
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-700">
+                                <i class="fas fa-check-circle text-gold"></i>
+                                Auto-scaling
+                            </li>
+                        </ul>
+                        <button class="w-full bg-primary text-white py-3 font-bold hover:bg-primary/90 transition-all">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-2xl transition-all">
+                    <div class="bg-primary h-3"></div>
+                    <div class="p-10">
+                        <div class="w-20 h-20 bg-gold/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-all">
+                            <i class="fas fa-mobile-alt text-4xl text-primary"></i>
+                        </div>
+                        <h3 class="text-3xl font-black text-primary mb-4">Mobile Apps</h3>
+                        <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                            Native and cross-platform mobile applications that deliver exceptional user 
+                            experiences.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-gray-700">
+                                <i class="fas fa-check-circle text-gold"></i>
+                                React Native
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-700">
+                                <i class="fas fa-check-circle text-gold"></i>
+                                iOS & Android
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-700">
+                                <i class="fas fa-check-circle text-gold"></i>
+                                App Store Deployment
+                            </li>
+                        </ul>
+                        <button class="w-full bg-primary text-white py-3 font-bold hover:bg-primary/90 transition-all">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-2xl transition-all">
+                    <div class="bg-gold h-3"></div>
+                    <div class="p-10">
+                        <div class="w-20 h-20 bg-gold/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-all">
+                            <i class="fas fa-cogs text-4xl text-primary"></i>
+                        </div>
+                        <h3 class="text-3xl font-black text-primary mb-4">DevOps & CI/CD</h3>
+                        <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                            Streamlined development workflows with automated testing, building, and deployment 
+                            pipelines.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-gray-700">
+                                <i class="fas fa-check-circle text-gold"></i>
+                                Docker & Kubernetes
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-700">
+                                <i class="fas fa-check-circle text-gold"></i>
+                                GitHub Actions
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-700">
+                                <i class="fas fa-check-circle text-gold"></i>
+                                Monitoring & Logging
+                            </li>
+                        </ul>
+                        <button class="w-full bg-gold text-primary py-3 font-bold hover:bg-yellow-500 transition-all">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-2xl transition-all">
+                    <div class="bg-gold h-3"></div>
+                    <div class="p-10">
+                        <div class="w-20 h-20 bg-gold/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-all">
+                            <i class="fas fa-database text-4xl text-primary"></i>
+                        </div>
+                        <h3 class="text-3xl font-black text-primary mb-4">API Development</h3>
+                        <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                            RESTful and GraphQL APIs designed for performance, security, and scalability.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-gray-700">
+                                <i class="fas fa-check-circle text-gold"></i>
+                                Node.js & Python
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-700">
+                                <i class="fas fa-check-circle text-gold"></i>
+                                API Documentation
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-700">
+                                <i class="fas fa-check-circle text-gold"></i>
+                                Authentication
+                            </li>
+                        </ul>
+                        <button class="w-full bg-gold text-primary py-3 font-bold hover:bg-yellow-500 transition-all">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden group hover:shadow-2xl transition-all">
+                    <div class="bg-gold h-3"></div>
+                    <div class="p-10">
+                        <div class="w-20 h-20 bg-gold/10 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gold/20 transition-all">
+                            <i class="fas fa-chalkboard-teacher text-4xl text-primary"></i>
+                        </div>
+                        <h3 class="text-3xl font-black text-primary mb-4">Technical Consulting</h3>
+                        <p class="text-lg text-gray-700 mb-6 leading-relaxed">
+                            Expert guidance on architecture decisions, technology stack selection, and best 
+                            practices.
+                        </p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-center gap-3 text-gray-700">
+                                <i class="fas fa-check-circle text-gold"></i>
+                                Code Reviews
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-700">
+                                <i class="fas fa-check-circle text-gold"></i>
+                                Architecture Planning
+                            </li>
+                            <li class="flex items-center gap-3 text-gray-700">
+                                <i class="fas fa-check-circle text-gold"></i>
+                                Team Mentorship
+                            </li>
+                        </ul>
+                        <button class="w-full bg-gold text-primary py-3 font-bold hover:bg-yellow-500 transition-all">
+                            Learn More
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="bg-gray-100 py-24 px-6">
+        <div class="max-w-6xl mx-auto">
+            <h2 class="text-7xl font-black text-primary mb-4 text-center">My Process</h2>
+            <div class="w-32 h-2 bg-gold mx-auto mb-16"></div>
+
+            <div class="grid grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-4xl font-black text-white">1</span>
+                    </div>
+                    <h3 class="text-2xl font-black text-primary mb-3">Discovery</h3>
+                    <p class="text-gray-700">Understanding your goals and requirements</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-4xl font-black text-white">2</span>
+                    </div>
+                    <h3 class="text-2xl font-black text-primary mb-3">Planning</h3>
+                    <p class="text-gray-700">Creating a roadmap and technical architecture</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-primary rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-4xl font-black text-white">3</span>
+                    </div>
+                    <h3 class="text-2xl font-black text-primary mb-3">Development</h3>
+                    <p class="text-gray-700">Building with agile methodology and iterations</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-24 h-24 bg-gold rounded-full flex items-center justify-center mx-auto mb-6">
+                        <span class="text-4xl font-black text-primary">4</span>
+                    </div>
+                    <h3 class="text-2xl font-black text-primary mb-3">Delivery</h3>
+                    <p class="text-gray-700">Launch with ongoing support and optimization</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="geometric-bg text-white py-24 px-6">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-7xl font-black mb-6">Ready to Start?</h2>
+            <p class="text-2xl mb-10 text-gray-300">
+                Let's discuss how I can help bring your project to life.
+            </p>
+            <button class="bg-gold text-primary px-12 py-5 text-2xl font-bold hover:bg-yellow-500 transition-all transform hover:scale-105">
+                Schedule a Call
+            </button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-6">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="text-2xl font-black">Chris Jazinski</div>
+            <div class="flex gap-6 text-2xl">
+                <a href="#" class="hover:text-gold transition-colors"><i class="fab fa-github"></i></a>
+                <a href="#" class="hover:text-gold transition-colors"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="hover:text-gold transition-colors"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
