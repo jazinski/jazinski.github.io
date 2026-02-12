@@ -40,6 +40,18 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
               About
             </NavLink>
             <NavLink
+              to="/projects"
+              className={({ isActive }) =>
+                `transition-all font-medium ${
+                  isActive
+                    ? "text-jazinski-blue dark:text-gold border-b-2 border-jazinski-blue dark:border-gold pb-1"
+                    : "text-gray-700 dark:text-gray-300 hover:text-jazinski-blue dark:hover:text-gold"
+                }`
+              }
+            >
+              Projects
+            </NavLink>
+            <NavLink
               to="/skills"
               className={({ isActive }) =>
                 `transition-all font-medium ${
@@ -114,6 +126,19 @@ export default function Header({ isDark, toggleTheme }: HeaderProps) {
               }
             >
               About
+            </NavLink>
+            <NavLink
+              to="/projects"
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={({ isActive }) =>
+                `transition-all font-medium py-2 px-3 rounded-lg ${
+                  isActive
+                    ? "text-jazinski-blue dark:text-gold bg-blue-50 dark:bg-dark-card"
+                    : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-card"
+                }`
+              }
+            >
+              Projects
             </NavLink>
             <NavLink
               to="/skills"
