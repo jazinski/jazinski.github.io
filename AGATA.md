@@ -35,47 +35,97 @@ You are **Agata**, an autonomous AI engineering agent. Your primary goal is to h
 - **Package Manager:** pnpm (workspace configuration)
 - **Icons:** react-icons library
 
-- **Key Files & Directories:**
-  - `src/main.tsx`: Application entry point
-  - `src/App.tsx`: Root component and routing configuration
-  - `src/pages/`: Individual page components (About, Contact, Home, Portfolio, etc.)
-  - `src/components/`: Reusable UI components (Header, Footer, Breadcrumb, Navigation)
-  - `vite.config.ts`: Vite build and plugin configuration
-  - `tailwind.config.js`: Tailwind CSS styling rules
-  - `package.json`: Project metadata, scripts, and dependencies
-  - `public/`: Static assets
-  - `dist/`: Build output (not committed, deployed to GitHub Pages)
+### Key Files & Directories
 
-- **Commands:**
-  - `pnpm dev`: Start development server
-  - `pnpm build`: Build for production
-  - `pnpm lint`: ESLint check
-  - `pnpm deploy`: Deploy to GitHub Pages (builds and pushes to gh-pages branch)
-  - `pnpm preview`: Preview production build locally
+- `src/main.tsx`: Application entry point
+- `src/App.tsx`: Root component and routing configuration
+- `src/pages/`: Individual page components (About, Contact, Home, Portfolio, etc.)
+- `src/components/`: Reusable UI components (Header, Footer, Breadcrumb, Navigation)
+- `vite.config.ts`: Vite build and plugin configuration
+- `tailwind.config.js`: Tailwind CSS styling rules
+- `package.json`: Project metadata, scripts, and dependencies
+- `public/`: Static assets
+- `dist/`: Build output (not committed, deployed to GitHub Pages)
 
-- **Patterns & Conventions:**
-  - **Component Structure:** Functional components with TypeScript interfaces for props
-  - **Routing:** Component-based routing defined in `App.tsx`
-  - **Styling:** Utility-first CSS using Tailwind classes
-  - **Icons:** Use `react-icons` for consistent iconography
-  - **Responsive Design:** Mobile-first approach with Tailwind breakpoints
-  - **Static Site:** No backend, all content is compiled at build time
+### Commands
 
-- **GitHub Pages Deployment:**
-  - Base URL: `/` (root domain: jazinski.github.io)
-  - Deploy script: `gh-pages -d dist` (pushes `dist/` to `gh-pages` branch)
-  - Automatic: Push to `main` can trigger deployment via GitHub Actions (verify if configured)
+- `pnpm dev`: Start development server
+- `pnpm build`: Build for production (output to `dist/`)
+- `pnpm lint`: Run ESLint checks
+- `pnpm deploy`: Deploy to GitHub Pages (builds and pushes to gh-pages branch)
+- `pnpm preview`: Preview production build locally
 
-- **Git Strategy:**
-  - Main branch: `main`
-  - Feature branches: `feature/description`
-  - Deployment branch: `gh-pages` (auto-generated, contains built static files)
-  - Use conventional commits: `feat:`, `fix:`, `docs:`, `style:`, `refactor:`
+### Patterns & Conventions
+
+#### Component Structure
+- **Functional components** with TypeScript interfaces for props
+- **Component-based routing** defined in `App.tsx`
+- **File naming:** PascalCase for components (`Header.tsx`, `Footer.tsx`)
+- **Props interfaces:** Explicitly defined and exported when shared
+
+#### Styling
+- **Utility-first CSS** using Tailwind classes
+- **Mobile-first** approach with Tailwind breakpoints
+- **Responsive design:** Test across viewport sizes
+- **Icons:** Use `react-icons` for consistent iconography
+
+#### Code Quality
+- **TypeScript:** Strict mode enabled, no implicit `any`
+- **ESLint:** Configured for React, TypeScript, and accessibility
+- **Formatting:** Consistent code style via ESLint rules
+- **Semantic HTML:** Use proper HTML5 elements for accessibility and SEO
+
+### GitHub Pages Deployment
+
+- **Base URL:** `/` (root domain: jazinski.github.io)
+- **Deploy script:** `gh-pages -d dist` (pushes `dist/` to `gh-pages` branch)
+- **Automatic deployment:** Verify if GitHub Actions is configured for auto-deploy on push to `main`
+- **Build artifacts:** `dist/` directory is git-ignored, only deployed to `gh-pages` branch
+
+### Git Strategy
+
+- **Main branch:** `main`
+- **Feature branches:** `feature/description`
+- **Deployment branch:** `gh-pages` (auto-generated, contains built static files)
+- **Commit conventions:** Use conventional commits format:
+  - `feat:` - New features
+  - `fix:` - Bug fixes
+  - `docs:` - Documentation updates
+  - `style:` - Code style changes (formatting, no logic changes)
+  - `refactor:` - Code refactoring without behavior change
+  - `chore:` - Maintenance tasks (dependency updates, build config)
+
+### Performance & Optimization
+
+- **Bundle size:** Monitor and optimize bundle size for fast load times
+- **Code splitting:** Leverage Vite's automatic code splitting
+- **Asset optimization:** Compress images, use modern formats (WebP, AVIF)
+- **Lazy loading:** Use React.lazy() for route-based code splitting if needed
+
+### Accessibility
+
+- **WCAG compliance:** Maintain AA level compliance minimum
+- **Semantic HTML:** Use proper heading hierarchy, landmarks, and ARIA labels
+- **Keyboard navigation:** Ensure all interactive elements are keyboard accessible
+- **Color contrast:** Verify sufficient contrast ratios
+- **Screen reader testing:** Test with screen readers when making significant UI changes
+
+### SEO Best Practices
+
+- **Meta tags:** Ensure proper `<title>`, `<meta name="description">`, Open Graph tags
+- **Structured data:** Consider adding JSON-LD schema markup for portfolio items
+- **Sitemap:** Maintain or generate sitemap.xml for search engines
+- **Robots.txt:** Configure for proper crawling
+
+## Recent Changes
+
+- **Dependency updates:** 16 packages updated via `bun update` (committed)
+- **Untracked file:** `bun.lock` present (consider adding to `.gitignore` if using pnpm exclusively)
 
 ## Notes
-- This is a static personal website - no backend or database
-- Performance critical: optimize bundle size and loading times
-- SEO important: ensure proper meta tags and semantic HTML
-- Accessibility: maintain WCAG compliance for portfolio presentation
-- Recent update: 16 packages updated via `bun update` (Step 7)
-- Untracked file: `bun.lock` (may need to .gitignore or commit depending on package manager strategy)
+
+- This is a **static personal website** - no backend or database
+- **Performance is critical:** Optimize bundle size and loading times
+- **SEO is important:** Ensure proper meta tags and semantic HTML
+- **Accessibility:** Maintain WCAG compliance for professional portfolio presentation
+- **Package manager:** Project uses `pnpm`, but `bun.lock` suggests `bun` was used for updates. Standardize on one package manager to avoid lock file conflicts.
