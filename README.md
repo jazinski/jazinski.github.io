@@ -8,7 +8,7 @@ This is a personal portfolio website built with React, TypeScript, and Vite. It 
 
 ## Tech Stack
 
-- **React 19** - Modern UI framework
+- **React 19** - Modern UI framework with latest features
 - **TypeScript** - Type-safe development
 - **Vite** - Fast build tool and dev server
 - **Tailwind CSS** - Utility-first styling
@@ -46,11 +46,26 @@ src/
 
 ## Features
 
-- Responsive design that works on all devices
-- Fast page loads with optimized assets
-- Modern React patterns and hooks
-- Type-safe codebase with TypeScript
-- ESLint configured for code quality
+- **Responsive Design** - Optimized for all devices (mobile, tablet, desktop)
+- **Fast Performance** - Optimized assets and lazy loading
+- **Modern React Patterns** - Hooks, functional components, React 19 features
+- **Type-Safe Codebase** - Full TypeScript coverage
+- **Code Quality** - ESLint configured for best practices
+- **GitHub Pages Deployment** - Automated deployment via gh-pages
+
+## Deployment
+
+This site is automatically deployed to GitHub Pages at: https://jazinski.github.io
+
+To deploy manually:
+```bash
+npm run deploy
+```
+
+## Documentation
+
+- [AGATA.md](./AGATA.md) - Agent rules and project conventions
+- All components follow React 19 and TypeScript best practices
 
 ## License
 
