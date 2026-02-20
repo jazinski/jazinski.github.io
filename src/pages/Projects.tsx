@@ -1,5 +1,4 @@
-import React from "react";
-import { GitBranch, ExternalLink, Calendar } from "./Icons";
+import { GitBranch, ExternalLink, Calendar } from "../components/Icons";
 
 interface Project {
   id: string;

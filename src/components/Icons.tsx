@@ -69,3 +69,57 @@ export function X() {
     </svg>
   );
 }
+
+export function GitBranch({ className }: { className?: string }) {
+  return (
+    <svg 
+      className={className || "w-5 h-5"} 
+      fill="none" 
+      viewBox="0 0 24 24" 
+      stroke="currentColor"
+    >
+      <path 
+        strokeLinecap="round" 
+        strokeLinejoin="round" 
+        strokeWidth={2} 
+        d="M6 3v12M18 9a3 3 0 100-6 3 3 0 000 6zM6 21a3 3 0 100-6 3 3 0 000 6zM6 15a6 6 0 006-6h6" 
+      />
+    </svg>
+  );
+}
+
+export function ExternalLink({ className }: { className?: string }) {
+  return (
+    <svg 
+      className={className || "w-5 h-5"} 
+      fill="none" 
+      viewBox="0 0 24 24" 
+      stroke="currentColor"
+    >
+      <path 
+        strokeLinecap="round" 
+        strokeLinejoin="round" 
+        strokeWidth={2} 
+        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" 
+      />
+    </svg>
+  );
+}
+
+export function Calendar({ className }: { className?: string }) {
+  return (
+    <svg 
+      className={className || "w-5 h-5"} 
+      fill="none" 
+      viewBox="0 0 24 24" 
+      stroke="currentColor"
+    >
+      <path 
+        strokeLinecap="round" 
+        strokeLinejoin="round" 
+        strokeWidth={2} 
+        d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" 
+      />
+    </svg>
+  );
+}
