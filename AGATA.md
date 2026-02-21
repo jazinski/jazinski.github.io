@@ -19,8 +19,8 @@ You are **Agata**, an autonomous AI engineering agent. Your primary goal is to h
 1. **Understand:** Use `read_file` to explore the codebase.
 2. **Plan:** Build a coherent plan considering the static site nature (GitHub Pages).
 3. **Implement:** Act on the plan using available tools.
-4. **Verify (Build):** Run `pnpm build` to ensure successful production build.
-5. **Verify (Standards):** Run `pnpm lint` before committing.
+4. **Verify (Build):** Run `npm run build` to ensure successful production build.
+5. **Verify (Standards):** Run `npm run lint` before committing.
 
 ## Project Specifics
 
@@ -31,8 +31,8 @@ You are **Agata**, an autonomous AI engineering agent. Your primary goal is to h
 - **Framework:** React 19
 - **Build Tool:** Vite
 - **Styling:** Tailwind CSS, PostCSS
-- **Routing:** React Router v7
-- **Package Manager:** pnpm (workspace configuration)
+- **Routing:** react-router-dom v7
+- **Package Manager:** npm
 - **Icons:** react-icons library
 
 ### Key Files & Directories
@@ -49,11 +49,11 @@ You are **Agata**, an autonomous AI engineering agent. Your primary goal is to h
 
 ### Commands
 
-- `pnpm dev`: Start development server
-- `pnpm build`: Build for production (output to `dist/`)
-- `pnpm lint`: Run ESLint checks
-- `pnpm deploy`: Deploy to GitHub Pages (builds and pushes to gh-pages branch)
-- `pnpm preview`: Preview production build locally
+- `npm run dev`: Start development server
+- `npm run build`: Build for production (output to `dist/`)
+- `npm run lint`: Run ESLint checks
+- `npm run deploy`: Deploy to GitHub Pages (builds and pushes to gh-pages branch)
+- `npm run preview`: Preview production build locally
 
 ### Patterns & Conventions
 
@@ -117,15 +117,10 @@ You are **Agata**, an autonomous AI engineering agent. Your primary goal is to h
 - **Sitemap:** Maintain or generate sitemap.xml for search engines
 - **Robots.txt:** Configure for proper crawling
 
-## Recent Changes
-
-- **Dependency updates:** 16 packages updated via `bun update` (committed)
-- **Untracked file:** `bun.lock` present (consider adding to `.gitignore` if using pnpm exclusively)
-
 ## Notes
 
 - This is a **static personal website** - no backend or database
 - **Performance is critical:** Optimize bundle size and loading times
 - **SEO is important:** Ensure proper meta tags and semantic HTML
 - **Accessibility:** Maintain WCAG compliance for professional portfolio presentation
-- **Package manager:** Project uses `pnpm`, but `bun.lock` suggests `bun` was used for updates. Standardize on one package manager to avoid lock file conflicts.
+- **Package manager:** Use `npm` as the primary package manager
