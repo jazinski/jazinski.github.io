@@ -28,12 +28,13 @@ You are **Agata**, an autonomous AI engineering agent. Your primary goal is to h
 
 - **Runtime:** Browser (static site hosted on GitHub Pages)
 - **Primary Language:** TypeScript
-- **Framework:** React 19
-- **Build Tool:** Vite
-- **Styling:** Tailwind CSS, PostCSS
-- **Routing:** react-router-dom v7
+- **Framework:** React 19.2.4
+- **Build Tool:** Vite 7.3.1
+- **Styling:** Tailwind CSS 3.4.19
+- **Routing:** react-router-dom v7.13.0
 - **Package Manager:** npm
-- **Icons:** react-icons library
+- **Icons:** react-icons library (v5.5.0)
+- **Repository:** `git@github.com:jazinski/jazinski.github.io.git`
 
 ### Key Files & Directories
 
@@ -50,9 +51,9 @@ You are **Agata**, an autonomous AI engineering agent. Your primary goal is to h
 ### Commands
 
 - `npm run dev`: Start development server
-- `npm run build`: Build for production (output to `dist/`)
+- `npm run build`: Build for production (TypeScript check + Vite build, output to `dist/`)
 - `npm run lint`: Run ESLint checks
-- `npm run deploy`: Deploy to GitHub Pages (builds and pushes to gh-pages branch)
+- `npm run deploy`: Deploy to GitHub Pages (runs predeploy → build, then gh-pages -d dist)
 - `npm run preview`: Preview production build locally
 
 ### Patterns & Conventions
@@ -79,14 +80,15 @@ You are **Agata**, an autonomous AI engineering agent. Your primary goal is to h
 
 - **Base URL:** `/` (root domain: jazinski.github.io)
 - **Deploy script:** `gh-pages -d dist` (pushes `dist/` to `gh-pages` branch)
-- **Automatic deployment:** Verify if GitHub Actions is configured for auto-deploy on push to `main`
+- **Deployment trigger:** Manual via `npm run deploy`
 - **Build artifacts:** `dist/` directory is git-ignored, only deployed to `gh-pages` branch
+- **Note:** Verify GitHub Pages settings if deployment fails (Settings → Pages → Source: gh-pages branch)
 
 ### Git Strategy
 
 - **Main branch:** `main`
 - **Feature branches:** `feature/description`
-- **Deployment branch:** `gh-pages` (auto-generated, contains built static files)
+- **Deployment branch:** `gh-pages` (auto-generated via gh-pages package, contains built static files)
 - **Commit conventions:** Use conventional commits format:
   - `feat:` - New features
   - `fix:` - Bug fixes
@@ -124,3 +126,4 @@ You are **Agata**, an autonomous AI engineering agent. Your primary goal is to h
 - **SEO is important:** Ensure proper meta tags and semantic HTML
 - **Accessibility:** Maintain WCAG compliance for professional portfolio presentation
 - **Package manager:** Use `npm` as the primary package manager
+- **Deployment:** Manual deployment via `npm run deploy` (not auto-deployed on push to main)
