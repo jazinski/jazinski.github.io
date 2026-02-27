@@ -1,9 +1,55 @@
 export default function Skills() {
   const skills = [
-    { category: "Frontend", items: ["React", "TypeScript", "JavaScript", "HTML5/CSS3", "Tailwind CSS", "Redux", "Next.js", "Vue.js"] },
-    { category: "Backend", items: ["Node.js", "Python", "Java", "Express", "REST APIs", "GraphQL", "Microservices", "PostgreSQL", "MongoDB"] },
-    { category: "Cloud & DevOps", items: ["AWS", "Docker", "Kubernetes", "CI/CD", "GitHub Actions", "Terraform", "Jenkins"] },
-    { category: "Tools & Practices", items: ["Git", "Agile/Scrum", "Test-Driven Development", "Code Review", "System Design", "Performance Optimization"] },
+    {
+      category: "Frontend",
+      items: [
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "HTML5/CSS3",
+        "Tailwind CSS",
+        "Redux",
+        "Next.js",
+        "Vue.js",
+      ],
+    },
+    {
+      category: "Backend",
+      items: [
+        "Node.js",
+        "Python",
+        "Java",
+        "Express",
+        "REST APIs",
+        "GraphQL",
+        "Microservices",
+        "PostgreSQL",
+        "MongoDB",
+      ],
+    },
+    {
+      category: "Cloud & DevOps",
+      items: [
+        "AWS",
+        "Docker",
+        "Kubernetes",
+        "CI/CD",
+        "GitHub Actions",
+        "Terraform",
+        "Jenkins",
+      ],
+    },
+    {
+      category: "Tools & Practices",
+      items: [
+        "Git",
+        "Agile/Scrum",
+        "Test-Driven Development",
+        "Code Review",
+        "System Design",
+        "Performance Optimization",
+      ],
+    },
   ];
 
   return (
@@ -21,7 +67,10 @@ export default function Skills() {
       {/* Skills Categories */}
       <div className="space-y-12">
         {skills.map((skillGroup) => (
-          <div key={skillGroup.category} className="card-geometric p-8 animate-on-scroll">
+          <div
+            key={skillGroup.category}
+            className="card-geometric p-8 animate-on-scroll"
+          >
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-jazinski-gold to-jazinski-gold-light flex items-center justify-center">
                 <span className="text-2xl">
@@ -35,7 +84,7 @@ export default function Skills() {
                 {skillGroup.category}
               </h2>
             </div>
-            
+
             <div className="flex flex-wrap gap-3">
               {skillGroup.items.map((skill) => (
                 <span

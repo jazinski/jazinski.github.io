@@ -3,7 +3,7 @@ export default function About() {
     { label: "Location", value: "Remote / USA" },
     { label: "Experience", value: "10+ Years" },
     { label: "Focus", value: "Full Stack & Cloud" },
-    { label: "Availability", value: "Open to Projects" }
+    { label: "Availability", value: "Open to Projects" },
   ];
 
   const experience = [
@@ -11,43 +11,50 @@ export default function About() {
       year: "2020 - Present",
       title: "Senior Software Engineer",
       company: "Tech Innovations Inc.",
-      description: "Leading development of cloud-native microservices architecture, mentoring junior developers, and driving technical excellence across teams."
+      description:
+        "Leading development of cloud-native microservices architecture, mentoring junior developers, and driving technical excellence across teams.",
     },
     {
       year: "2017 - 2020",
       title: "Full Stack Developer",
       company: "Digital Solutions Co.",
-      description: "Built scalable web applications using React and Node.js, implemented CI/CD pipelines, and optimized database performance."
+      description:
+        "Built scalable web applications using React and Node.js, implemented CI/CD pipelines, and optimized database performance.",
     },
     {
       year: "2014 - 2017",
       title: "Software Engineer",
       company: "Startup Ventures",
-      description: "Developed MVPs for multiple products, worked across the full stack, and contributed to product strategy and technical decisions."
-    }
+      description:
+        "Developed MVPs for multiple products, worked across the full stack, and contributed to product strategy and technical decisions.",
+    },
   ];
 
   const values = [
     {
       icon: "🎯",
       title: "Quality First",
-      description: "Writing clean, maintainable code that stands the test of time and scales with your business."
+      description:
+        "Writing clean, maintainable code that stands the test of time and scales with your business.",
     },
     {
       icon: "🚀",
       title: "Innovation Driven",
-      description: "Always exploring new technologies and approaches to solve problems more effectively."
+      description:
+        "Always exploring new technologies and approaches to solve problems more effectively.",
     },
     {
       icon: "🤝",
       title: "Collaborative",
-      description: "Strong believer in teamwork, knowledge sharing, and building inclusive engineering cultures."
+      description:
+        "Strong believer in teamwork, knowledge sharing, and building inclusive engineering cultures.",
     },
     {
       icon: "📚",
       title: "Continuous Learning",
-      description: "Committed to staying current with industry trends and constantly improving my craft."
-    }
+      description:
+        "Committed to staying current with industry trends and constantly improving my craft.",
+    },
   ];
 
   return (
@@ -73,24 +80,28 @@ export default function About() {
             <h2 className="text-3xl font-bold mb-6 gold-glow">About Me</h2>
             <div className="space-y-4 text-gray-400 leading-relaxed">
               <p className="text-lg">
-                Full Stack Software Engineer with a passion for building scalable web applications 
-                and solving complex technical challenges.
+                Full Stack Software Engineer with a passion for building
+                scalable web applications and solving complex technical
+                challenges.
               </p>
               <p>
-                I specialize in full-stack development with expertise in modern JavaScript frameworks, 
-                cloud infrastructure, and distributed systems. My experience spans across developing 
-                enterprise-level applications, optimizing system performance, and implementing robust 
-                CI/CD pipelines.
+                I specialize in full-stack development with expertise in modern
+                JavaScript frameworks, cloud infrastructure, and distributed
+                systems. My experience spans across developing enterprise-level
+                applications, optimizing system performance, and implementing
+                robust CI/CD pipelines.
               </p>
               <p>
-                With a strong foundation in both frontend and backend technologies, I focus on creating 
-                efficient, maintainable code that delivers exceptional user experiences. I'm particularly 
-                interested in cloud architecture, microservices, and leveraging cutting-edge technologies 
-                to build innovative solutions.
+                With a strong foundation in both frontend and backend
+                technologies, I focus on creating efficient, maintainable code
+                that delivers exceptional user experiences. I'm particularly
+                interested in cloud architecture, microservices, and leveraging
+                cutting-edge technologies to build innovative solutions.
               </p>
               <p>
-                When I'm not coding, I enjoy contributing to open-source projects, exploring new 
-                technologies, and sharing knowledge with the developer community.
+                When I'm not coding, I enjoy contributing to open-source
+                projects, exploring new technologies, and sharing knowledge with
+                the developer community.
               </p>
             </div>
           </div>
@@ -126,7 +137,7 @@ export default function About() {
             <div key={index} className="card-geometric p-8 relative">
               {/* Gold dot */}
               <div className="absolute -left-3 top-8 w-6 h-6 bg-jazinski-gold rounded-full border-4 border-dark-bg"></div>
-              
+
               <div className="grid md:grid-cols-4 gap-4">
                 <div className="md:col-span-1">
                   <div className="text-jazinski-gold font-bold text-lg">
@@ -140,9 +151,7 @@ export default function About() {
                   <div className="text-jazinski-gold font-semibold mb-3">
                     {exp.company}
                   </div>
-                  <p className="text-gray-400">
-                    {exp.description}
-                  </p>
+                  <p className="text-gray-400">{exp.description}</p>
                 </div>
               </div>
             </div>
@@ -164,9 +173,7 @@ export default function About() {
               <h3 className="text-xl font-bold text-white mb-3">
                 {value.title}
               </h3>
-              <p className="text-gray-400">
-                {value.description}
-              </p>
+              <p className="text-gray-400">{value.description}</p>
             </div>
           ))}
         </div>

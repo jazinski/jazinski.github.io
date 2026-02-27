@@ -4,8 +4,8 @@
   /* Geometric Cut-Corner Card */
   .card-geometric {
     position: relative;
-    background: theme('colors.dark.card', '#1a1f26');
-    border: 1px solid theme('colors.dark.border', '#2a3038');
+    background: theme("colors.dark.card", "#1a1f26");
+    border: 1px solid theme("colors.dark.border", "#2a3038");
     clip-path: polygon(
       0 0,
       calc(100% - 12px) 0,
@@ -18,10 +18,14 @@
   }
 
   .card-geometric::before {
-    content: '';
+    content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, theme('colors.gold.light', '#e6c068'), theme('colors.gold.DEFAULT', '#c9a65c'));
+    background: linear-gradient(
+      135deg,
+      theme("colors.gold.light", "#e6c068"),
+      theme("colors.gold.DEFAULT", "#c9a65c")
+    );
     opacity: 0;
     transition: opacity 0.3s ease;
     z-index: 0;
@@ -35,8 +39,10 @@
 
   .card-geometric:hover {
     transform: translateY(-4px) rotate(-1deg);
-    border-color: theme('colors.gold.DEFAULT', '#c9a65c');
-    box-shadow: theme('shadow-glow'), 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+    border-color: theme("colors.gold.DEFAULT", "#c9a65c");
+    box-shadow:
+      theme("shadow-glow"),
+      0 10px 40px -10px rgba(0, 0, 0, 0.5);
   }
 
   .card-geometric:hover::before {
@@ -45,34 +51,40 @@
 
   /* Gold Glow Text Effect */
   .gold-glow {
-    color: theme('colors.gold.DEFAULT', '#c9a65c');
-    text-shadow: 
-      0 0 10px theme('colors.gold.DEFAULT', '#c9a65c'),
-      0 0 20px theme('colors.gold.DEFAULT', '#c9a65c'),
-      0 0 40px theme('colors.gold.DEFAULT', '#c9a65c');
+    color: theme("colors.gold.DEFAULT", "#c9a65c");
+    text-shadow:
+      0 0 10px theme("colors.gold.DEFAULT", "#c9a65c"),
+      0 0 20px theme("colors.gold.DEFAULT", "#c9a65c"),
+      0 0 40px theme("colors.gold.DEFAULT", "#c9a65c");
   }
 
   .gold-glow-subtle {
-    color: theme('colors.gold.DEFAULT', '#c9a65c');
+    color: theme("colors.gold.DEFAULT", "#c9a65c");
     text-shadow: 0 0 8px rgba(201, 166, 92, 0.5);
   }
 
   /* Primary Button - Gold Gradient */
   .btn-primary {
     position: relative;
-    background: linear-gradient(135deg, theme('colors.gold.light', '#e6c068'), theme('colors.gold.DEFAULT', '#c9a65c'));
+    background: linear-gradient(
+      135deg,
+      theme("colors.gold.light", "#e6c068"),
+      theme("colors.gold.DEFAULT", "#c9a65c")
+    );
     color: #0f1419;
     font-weight: 600;
     padding: 0.75rem 2rem;
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: theme('shadow-glow');
+    box-shadow: theme("shadow-glow");
   }
 
   .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: theme('shadow-glow-strong'), 0 8px 25px -5px rgba(201, 166, 92, 0.4);
+    box-shadow:
+      theme("shadow-glow-strong"),
+      0 8px 25px -5px rgba(201, 166, 92, 0.4);
   }
 
   .btn-primary:active {
@@ -83,18 +95,18 @@
   .btn-secondary {
     position: relative;
     background: transparent;
-    color: theme('colors.gold.DEFAULT', '#c9a65c');
+    color: theme("colors.gold.DEFAULT", "#c9a65c");
     font-weight: 600;
     padding: 0.75rem 2rem;
-    border: 2px solid theme('colors.gold.DEFAULT', '#c9a65c');
+    border: 2px solid theme("colors.gold.DEFAULT", "#c9a65c");
     cursor: pointer;
     transition: all 0.3s ease;
   }
 
   .btn-secondary:hover {
-    background: theme('colors.gold.DEFAULT', '#c9a65c');
+    background: theme("colors.gold.DEFAULT", "#c9a65c");
     color: #0f1419;
-    box-shadow: theme('shadow-glow');
+    box-shadow: theme("shadow-glow");
     transform: translateY(-2px);
   }
 
@@ -138,28 +150,28 @@
 
   /* Stats Card */
   .stats-card {
-    background: theme('colors.dark.card', '#1a1f26');
-    border: 1px solid theme('colors.dark.border', '#2a3038');
+    background: theme("colors.dark.card", "#1a1f26");
+    border: 1px solid theme("colors.dark.border", "#2a3038");
     padding: 1.5rem;
     text-align: center;
     transition: all 0.3s ease;
   }
 
   .stats-card:hover {
-    border-color: theme('colors.gold.DEFAULT', '#c9a65c');
-    box-shadow: theme('shadow-glow');
+    border-color: theme("colors.gold.DEFAULT", "#c9a65c");
+    box-shadow: theme("shadow-glow");
   }
 
   .stats-card .stat-number {
     font-size: 2.5rem;
     font-weight: 800;
-    color: theme('colors.gold.DEFAULT', '#c9a65c');
+    color: theme("colors.gold.DEFAULT", "#c9a65c");
     text-shadow: 0 0 20px rgba(201, 166, 92, 0.5);
   }
 
   .stats-card .stat-label {
     font-size: 0.875rem;
-    color: theme('colors.gray.400', '#9ca3af');
+    color: theme("colors.gray.400", "#9ca3af");
     text-transform: uppercase;
     letter-spacing: 0.05em;
   }
@@ -171,21 +183,27 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, theme('colors.gold.light', '#e6c068'), theme('colors.gold.DEFAULT', '#c9a65c'));
+    background: linear-gradient(
+      135deg,
+      theme("colors.gold.light", "#e6c068"),
+      theme("colors.gold.DEFAULT", "#c9a65c")
+    );
     color: #0f1419;
     font-size: 1.75rem;
     border-radius: 0.75rem;
     margin-bottom: 1rem;
-    box-shadow: theme('shadow-glow');
+    box-shadow: theme("shadow-glow");
   }
 
   /* Timeline Dot */
   .timeline-dot {
     width: 1rem;
     height: 1rem;
-    background: theme('colors.gold.DEFAULT', '#c9a65c');
+    background: theme("colors.gold.DEFAULT", "#c9a65c");
     border-radius: 50%;
-    box-shadow: 0 0 0 4px rgba(201, 166, 92, 0.2), theme('shadow-glow');
+    box-shadow:
+      0 0 0 4px rgba(201, 166, 92, 0.2),
+      theme("shadow-glow");
     position: relative;
     z-index: 1;
   }
@@ -199,23 +217,27 @@
   .section-header h2 {
     font-size: 2.5rem;
     font-weight: 800;
-    color: theme('colors.gray.100', '#f3f4f6');
+    color: theme("colors.gray.100", "#f3f4f6");
     margin-bottom: 0.75rem;
   }
 
   .section-header .accent-line {
     width: 4rem;
     height: 0.25rem;
-    background: linear-gradient(90deg, theme('colors.gold.light', '#e6c068'), theme('colors.gold.DEFAULT', '#c9a65c'));
+    background: linear-gradient(
+      90deg,
+      theme("colors.gold.light", "#e6c068"),
+      theme("colors.gold.DEFAULT", "#c9a65c")
+    );
     margin: 0 auto;
     border-radius: 0.125rem;
   }
 
   /* Input Field */
   .input-gold {
-    background: theme('colors.dark.base', '#0f1419');
-    border: 1px solid theme('colors.dark.border', '#2a3038');
-    color: theme('colors.gray.100', '#f3f4f6');
+    background: theme("colors.dark.base", "#0f1419");
+    border: 1px solid theme("colors.dark.border", "#2a3038");
+    color: theme("colors.gray.100", "#f3f4f6");
     padding: 0.875rem 1rem;
     border-radius: 0.5rem;
     transition: all 0.3s ease;
@@ -224,21 +246,23 @@
 
   .input-gold:focus {
     outline: none;
-    border-color: theme('colors.gold.DEFAULT', '#c9a65c');
-    box-shadow: 0 0 0 3px rgba(201, 166, 92, 0.2), theme('shadow-glow');
+    border-color: theme("colors.gold.DEFAULT", "#c9a65c");
+    box-shadow:
+      0 0 0 3px rgba(201, 166, 92, 0.2),
+      theme("shadow-glow");
   }
 
   .input-gold::placeholder {
-    color: theme('colors.gray.500', '#6b7280');
+    color: theme("colors.gray.500", "#6b7280");
   }
 
   /* Tech Stack Pill */
   .tech-pill {
     display: inline-block;
     padding: 0.375rem 0.875rem;
-    background: theme('colors.dark.base', '#0f1419');
-    border: 1px solid theme('colors.dark.border', '#2a3038');
-    color: theme('colors.gray.300', '#d1d5db');
+    background: theme("colors.dark.base", "#0f1419");
+    border: 1px solid theme("colors.dark.border", "#2a3038");
+    color: theme("colors.gray.300", "#d1d5db");
     font-size: 0.75rem;
     font-weight: 500;
     border-radius: 9999px;
@@ -246,8 +270,8 @@
   }
 
   .tech-pill:hover {
-    border-color: theme('colors.gold.DEFAULT', '#c9a65c');
-    color: theme('colors.gold.DEFAULT', '#c9a65c');
+    border-color: theme("colors.gold.DEFAULT", "#c9a65c");
+    color: theme("colors.gold.DEFAULT", "#c9a65c");
     box-shadow: 0 0 10px rgba(201, 166, 92, 0.2);
   }
 }

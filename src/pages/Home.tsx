@@ -17,7 +17,8 @@ export default function Home() {
           </span>
         </h1>
         <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
-          Building exceptional web experiences with modern technologies and creative solutions.
+          Building exceptional web experiences with modern technologies and
+          creative solutions.
         </p>
       </div>
 
@@ -28,15 +29,24 @@ export default function Home() {
             <div className="stat-number">5+</div>
             <div className="stat-label">Years Experience</div>
           </div>
-          <div className="stats-card scroll-reveal" style={{ animationDelay: '0.1s' }}>
+          <div
+            className="stats-card scroll-reveal"
+            style={{ animationDelay: "0.1s" }}
+          >
             <div className="stat-number">50+</div>
             <div className="stat-label">Projects Completed</div>
           </div>
-          <div className="stats-card scroll-reveal" style={{ animationDelay: '0.2s' }}>
+          <div
+            className="stats-card scroll-reveal"
+            style={{ animationDelay: "0.2s" }}
+          >
             <div className="stat-number">30+</div>
             <div className="stat-label">Happy Clients</div>
           </div>
-          <div className="stats-card scroll-reveal" style={{ animationDelay: '0.3s' }}>
+          <div
+            className="stats-card scroll-reveal"
+            style={{ animationDelay: "0.3s" }}
+          >
             <div className="stat-number">15+</div>
             <div className="stat-label">Technologies</div>
           </div>
@@ -45,10 +55,7 @@ export default function Home() {
 
       {/* Content Cards with Gold & Glow geometric styling */}
       <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16 px-4">
-        <Link
-          to="/about"
-          className="card-geometric p-8 cursor-pointer"
-        >
+        <Link to="/about" className="card-geometric p-8 cursor-pointer">
           <div className="text-5xl mb-6 transition-transform group-hover:scale-110">
             👨‍💻
           </div>
@@ -56,20 +63,16 @@ export default function Home() {
             About
           </h2>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-            Learn more about Jazinski and our passion for building exceptional web experiences.
+            Learn more about Jazinski and our passion for building exceptional
+            web experiences.
           </p>
           <div className="mt-6 text-jazinski-blue dark:text-gold font-semibold">
             Learn more →
           </div>
         </Link>
 
-        <Link
-          to="/skills"
-          className="card-geometric p-8 cursor-pointer"
-        >
-          <div className="text-5xl mb-6">
-            🛠️
-          </div>
+        <Link to="/skills" className="card-geometric p-8 cursor-pointer">
+          <div className="text-5xl mb-6">🛠️</div>
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
             Skills
           </h2>
@@ -81,18 +84,14 @@ export default function Home() {
           </div>
         </Link>
 
-        <Link
-          to="/services"
-          className="card-geometric p-8 cursor-pointer"
-        >
-          <div className="text-5xl mb-6">
-            💼
-          </div>
+        <Link to="/services" className="card-geometric p-8 cursor-pointer">
+          <div className="text-5xl mb-6">💼</div>
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
             Services
           </h2>
           <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-            Discover our comprehensive solutions for development, design, and innovation.
+            Discover our comprehensive solutions for development, design, and
+            innovation.
           </p>
           <div className="mt-6 text-jazinski-blue dark:text-gold font-semibold">
             View services →

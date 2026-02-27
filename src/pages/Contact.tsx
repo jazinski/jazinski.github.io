@@ -5,22 +5,22 @@ export default function Contact() {
       title: "Email",
       value: "hello@jazinski.dev",
       link: "mailto:hello@jazinski.dev",
-      description: "For project inquiries and general questions"
+      description: "For project inquiries and general questions",
     },
     {
       icon: "🐙",
       title: "GitHub",
       value: "@jazinski",
       link: "https://github.com/jazinski",
-      description: "Check out my open source work"
+      description: "Check out my open source work",
     },
     {
       icon: "💼",
       title: "LinkedIn",
       value: "Connect with me",
       link: "https://linkedin.com/in/jazinski",
-      description: "Let's grow our professional network"
-    }
+      description: "Let's grow our professional network",
+    },
   ];
 
   return (
@@ -48,9 +48,13 @@ export default function Contact() {
             <div className="w-16 h-16 mx-auto mb-6 rounded-lg bg-gradient-to-br from-jazinski-gold to-jazinski-gold-light flex items-center justify-center">
               <span className="text-3xl">{method.icon}</span>
             </div>
-            
-            <h2 className="text-2xl font-bold text-white mb-2">{method.title}</h2>
-            <p className="text-jazinski-gold font-semibold mb-3">{method.value}</p>
+
+            <h2 className="text-2xl font-bold text-white mb-2">
+              {method.title}
+            </h2>
+            <p className="text-jazinski-gold font-semibold mb-3">
+              {method.value}
+            </p>
             <p className="text-gray-400 text-sm">{method.description}</p>
           </a>
         ))}
@@ -61,11 +65,14 @@ export default function Contact() {
         <h2 className="text-3xl font-bold mb-8 text-center gold-glow">
           Send Me a Message
         </h2>
-        
+
         <form className="space-y-6">
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <label htmlFor="name" className="block text-sm font-semibold text-gray-400 mb-2 uppercase tracking-wide">
+              <label
+                htmlFor="name"
+                className="block text-sm font-semibold text-gray-400 mb-2 uppercase tracking-wide"
+              >
                 Name
               </label>
               <input
@@ -77,9 +84,12 @@ export default function Contact() {
                 placeholder="John Doe"
               />
             </div>
-            
+
             <div>
-              <label htmlFor="email" className="block text-sm font-semibold text-gray-400 mb-2 uppercase tracking-wide">
+              <label
+                htmlFor="email"
+                className="block text-sm font-semibold text-gray-400 mb-2 uppercase tracking-wide"
+              >
                 Email
               </label>
               <input
@@ -92,9 +102,12 @@ export default function Contact() {
               />
             </div>
           </div>
-          
+
           <div>
-            <label htmlFor="subject" className="block text-sm font-semibold text-gray-400 mb-2 uppercase tracking-wide">
+            <label
+              htmlFor="subject"
+              className="block text-sm font-semibold text-gray-400 mb-2 uppercase tracking-wide"
+            >
               Subject
             </label>
             <input
@@ -106,9 +119,12 @@ export default function Contact() {
               placeholder="Project Inquiry"
             />
           </div>
-          
+
           <div>
-            <label htmlFor="message" className="block text-sm font-semibold text-gray-400 mb-2 uppercase tracking-wide">
+            <label
+              htmlFor="message"
+              className="block text-sm font-semibold text-gray-400 mb-2 uppercase tracking-wide"
+            >
               Message
             </label>
             <textarea
@@ -120,11 +136,8 @@ export default function Contact() {
               placeholder="Tell me about your project..."
             />
           </div>
-          
-          <button
-            type="submit"
-            className="btn-primary w-full text-lg py-4"
-          >
+
+          <button type="submit" className="btn-primary w-full text-lg py-4">
             Send Message
           </button>
         </form>

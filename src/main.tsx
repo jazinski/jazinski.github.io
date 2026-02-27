@@ -1,20 +1,20 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
-import { HashRouter, Routes, Route } from 'react-router-dom'
-import './index.css'
-import App from './App.tsx'
-import Home from './pages/Home.tsx'
-import HomeMockup1 from './pages/Home-Mockup1.tsx'
-import HomeMockup2 from './pages/Home-Mockup2.tsx'
-import HomeMockup3 from './pages/Home-Mockup3.tsx'
-import About from './pages/About.tsx'
-import Projects from './pages/Projects.tsx'
-import Skills from './pages/Skills.tsx'
-import Services from './pages/Services.tsx'
-import Contact from './pages/Contact.tsx'
-import NotFound from './pages/NotFound.tsx'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
+import { HashRouter, Routes, Route } from "react-router-dom";
+import "./index.css";
+import App from "./App.tsx";
+import Home from "./pages/Home.tsx";
+import HomeMockup1 from "./pages/Home-Mockup1.tsx";
+import HomeMockup2 from "./pages/Home-Mockup2.tsx";
+import HomeMockup3 from "./pages/Home-Mockup3.tsx";
+import About from "./pages/About.tsx";
+import Projects from "./pages/Projects.tsx";
+import Skills from "./pages/Skills.tsx";
+import Services from "./pages/Services.tsx";
+import Contact from "./pages/Contact.tsx";
+import NotFound from "./pages/NotFound.tsx";
 
-createRoot(document.getElementById('root')!).render(
+createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <HashRouter>
       <Routes>
@@ -33,4 +33,4 @@ createRoot(document.getElementById('root')!).render(
       </Routes>
     </HashRouter>
   </StrictMode>,
-)
+);

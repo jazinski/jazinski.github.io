@@ -1,18 +1,20 @@
-import { Link, useLocation } from 'react-router-dom';
-import { FiHome, FiChevronRight } from 'react-icons/fi';
+import { Link, useLocation } from "react-router-dom";
+import { FiHome, FiChevronRight } from "react-icons/fi";
 
 export default function Breadcrumb() {
   const location = useLocation();
-  
+
   // Don't show breadcrumb on home page
-  if (location.pathname === '/') {
+  if (location.pathname === "/") {
     return null;
   }
 
   // Get the current page name from the path
-  const pathSegments = location.pathname.split('/').filter(segment => segment);
-  const currentPage = pathSegments[0] || '';
-  
+  const pathSegments = location.pathname
+    .split("/")
+    .filter((segment) => segment);
+  const currentPage = pathSegments[0] || "";
+
   // Capitalize the first letter of the page name
   const pageName = currentPage.charAt(0).toUpperCase() + currentPage.slice(1);
 

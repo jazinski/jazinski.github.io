@@ -17,7 +17,8 @@ const projects: Project[] = [
   {
     id: "agata-loop",
     title: "Agata Loop",
-    description: "Autonomous AI engineering agent system with GitHub integration",
+    description:
+      "Autonomous AI engineering agent system with GitHub integration",
     longDescription:
       "An advanced autonomous engineering loop that integrates with GitHub webhooks, performs intelligent code analysis, security audits, and automated deployments. Features include AI swarm audits, Shadow Lab verification, and comprehensive testing pipelines.",
     image: "/projects/agata-loop.jpg",
