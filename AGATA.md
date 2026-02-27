@@ -142,22 +142,76 @@ You are **Agata**, an autonomous AI engineering agent. Your primary goal is to h
 3. If significantly increasing bundle size, consider lazy loading
 4. Update AGATA.md if dependency affects patterns
 
+#### Adding a Portfolio Item
+1. Update portfolio data in `src/pages/Portfolio.tsx` or data file
+2. Add project images to `public/` or import in component
+3. Optimize images (compress, use WebP if possible)
+4. Update portfolio grid/list display
+5. Add any new technology badges/icons
+6. Test responsive layout
+7. Build and deploy
+
+#### Updating Navigation
+1. Locate navigation component (`src/components/Header.tsx` or `Navigation.tsx`)
+2. Add or update navigation links
+3. Verify mobile menu includes changes
+4. Test active state highlighting
+5. Check accessibility (keyboard nav, ARIA)
+
+#### Adding Contact Form
+1. Create or update `src/pages/Contact.tsx`
+2. Use form service (Formspree, Netlify Forms, etc.)
+3. Add form validation
+4. Style with Tailwind CSS
+5. Add success/error states
+6. Test form submission
+7. Verify accessibility
+
+#### Implementing Dark Mode
+1. Add dark mode toggle component
+2. Update Tailwind config for dark mode
+3. Apply dark: variants to components
+4. Store preference in localStorage
+5. Test all pages in both modes
+6. Verify color contrast in both modes
+
 ### Troubleshooting
 
 #### Build Failures
 - **TypeScript errors:** Check type definitions, run `tsc --noEmit`
 - **Vite errors:** Clear cache with `rm -rf node_modules/.vite`
 - **Lint errors:** Run `npm run lint` and fix reported issues
+- **Import errors:** Verify import paths and file extensions
 
 #### Deployment Issues
 - **404 on GitHub Pages:** Check `vite.config.ts` base URL matches repository name
 - **Assets not loading:** Verify paths are relative or use Vite's asset handling
 - **Caching issues:** Add cache busting or clear browser cache
+- **Deploy script fails:** Check build output and gh-pages package
 
 #### Performance Issues
 - **Large bundle:** Analyze with `npm run build` and check chunk sizes
 - **Slow load times:** Optimize images, implement lazy loading
 - **CLS issues:** Add explicit dimensions to images, use skeleton loaders
+- **Slow builds:** Check for unnecessary dependencies, optimize Vite config
+
+#### Runtime Issues
+- **Blank page:** Check browser console for errors, verify root element
+- **Routing not working:** Verify BrowserRouter basename prop
+- **Styles not applied:** Check Tailwind directives in CSS, verify class names
+- **Images not showing:** Check file paths and imports
+
+#### Development Issues
+- **Hot reload not working:** Clear Vite cache, restart dev server
+- **Module not found:** Run `npm install` to ensure dependencies are installed
+- **Type errors in IDE:** Restart TypeScript server, check tsconfig.json
+- **Lint warnings:** Run `npm run lint` and fix issues
+
+#### SEO Issues
+- **Meta tags not updating:** Check Helmet usage or index.html
+- **Site not indexed:** Verify robots.txt and sitemap.xml
+- **Open Graph not working:** Check meta tags in page source
+- **Poor search ranking:** Improve content, add structured data
 
 ## Notes
 
