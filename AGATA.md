@@ -119,6 +119,46 @@ You are **Agata**, an autonomous AI engineering agent. Your primary goal is to h
 - **Sitemap:** Maintain or generate sitemap.xml for search engines
 - **Robots.txt:** Configure for proper crawling
 
+### Common Tasks
+
+#### Adding a New Page
+1. Create page component in `src/pages/NewPage.tsx`
+2. Add route in `src/App.tsx` under `<Routes>`
+3. Update navigation in `src/components/Header.tsx` or `src/components/Navigation.tsx`
+4. Add breadcrumb support if needed
+5. Test responsive design across breakpoints
+6. Build and deploy: `npm run build && npm run deploy`
+
+#### Updating Content
+1. Locate content in respective page component
+2. Make changes preserving component structure
+3. Run lint: `npm run lint`
+4. Build: `npm run build`
+5. Deploy: `npm run deploy`
+
+#### Adding New Dependencies
+1. Install: `npm install package-name`
+2. Verify bundle size impact: `npm run build`
+3. If significantly increasing bundle size, consider lazy loading
+4. Update AGATA.md if dependency affects patterns
+
+### Troubleshooting
+
+#### Build Failures
+- **TypeScript errors:** Check type definitions, run `tsc --noEmit`
+- **Vite errors:** Clear cache with `rm -rf node_modules/.vite`
+- **Lint errors:** Run `npm run lint` and fix reported issues
+
+#### Deployment Issues
+- **404 on GitHub Pages:** Check `vite.config.ts` base URL matches repository name
+- **Assets not loading:** Verify paths are relative or use Vite's asset handling
+- **Caching issues:** Add cache busting or clear browser cache
+
+#### Performance Issues
+- **Large bundle:** Analyze with `npm run build` and check chunk sizes
+- **Slow load times:** Optimize images, implement lazy loading
+- **CLS issues:** Add explicit dimensions to images, use skeleton loaders
+
 ## Notes
 
 - This is a **static personal website** - no backend or database
